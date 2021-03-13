@@ -36,8 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_cron',
     'news',
-    'comments'
+    'comments',
 ]
 
 MIDDLEWARE = [
@@ -96,6 +97,11 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+]
+
+# Settings for django-cron
+CRON_CLASSES = [
+    "news.cron.ResetUpvotes",
 ]
 
 # Internationalization
