@@ -10,7 +10,7 @@ class Comment(models.Model):
     creation_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ['-creation_date']
+        ordering = ["-creation_date"]
 
     def __str__(self):
         return self.author_name

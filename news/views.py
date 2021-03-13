@@ -10,6 +10,7 @@ class NewsList(generics.ListCreateAPIView):
     """
     List all news, or create a new.
     """
+
     queryset = News.objects.all()
     serializer_class = NewsSerializer
 

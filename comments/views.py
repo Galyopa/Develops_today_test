@@ -8,6 +8,7 @@ class CommentsList(generics.ListCreateAPIView):
     """
     List all comments, or create a new.
     """
+
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
 
@@ -20,7 +21,7 @@ class CommentsListFilteredByNews(generics.ListCreateAPIView):
     serializer_class = CommentSerializer
 
     def get_queryset(self):
-        news = self.kwargs['pk']
+        news = self.kwargs["pk"]
         return Comment.objects.all().filter(news=news)
 
 

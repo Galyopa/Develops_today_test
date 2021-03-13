@@ -9,7 +9,7 @@ class News(models.Model):
     author_name = models.CharField(max_length=64)
 
     class Meta:
-        ordering = ['-creation_date']
+        ordering = ["-creation_date"]
 
     def upvote(self):
         self.amount_of_upvotes += 1

@@ -7,22 +7,29 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='News',
+            name="News",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=140)),
-                ('link', models.URLField()),
-                ('creation_date', models.DateTimeField(auto_now_add=True)),
-                ('amount_of_upvotes', models.IntegerField(default=0)),
-                ('author_name', models.CharField(max_length=64)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=140)),
+                ("link", models.URLField()),
+                ("creation_date", models.DateTimeField(auto_now_add=True)),
+                ("amount_of_upvotes", models.IntegerField(default=0)),
+                ("author_name", models.CharField(max_length=64)),
             ],
             options={
-                'ordering': ['-creation_date'],
+                "ordering": ["-creation_date"],
             },
         ),
     ]
