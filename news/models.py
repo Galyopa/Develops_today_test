@@ -11,5 +11,9 @@ class News(models.Model):
     class Meta:
         ordering = ['-creation_date']
 
+    def upvote(self):
+        self.amount_of_upvotes += 1
+        self.save()
+
     def __str__(self):
         return self.title
