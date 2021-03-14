@@ -38,11 +38,8 @@
 #
 # SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
-
+from .base import *
 import environ
-
-# If using in your own project, update the project namespace below
-from base import *
 
 env = environ.Env(
     # set casting, default value
