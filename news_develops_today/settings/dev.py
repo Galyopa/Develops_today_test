@@ -20,8 +20,5 @@ DATABASES = {
     }
 }
 
-# show mail messages on the terminal
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-
 # run on every host.
 ALLOWED_HOSTS = ["*"]
